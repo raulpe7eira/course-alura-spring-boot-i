@@ -1,7 +1,6 @@
 package br.com.alura.forum.controller.form;
 
 import br.com.alura.forum.model.Topico;
-import br.com.alura.forum.repository.TopicoRepository;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
@@ -34,10 +33,10 @@ public class AtualizaTopicoForm {
         this.mensagem = mensagem;
     }
 
-    public Topico atualizar(Long id, TopicoRepository topicoRepository) {
-        Topico topico = topicoRepository.getOne(id);
+    public Topico atualizar(Topico topico) {
         topico.setTitulo(this.titulo);
         topico.setMensagem(this.mensagem);
         return topico;
     }
+
 }
