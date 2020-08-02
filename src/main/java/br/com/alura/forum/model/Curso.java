@@ -14,11 +14,6 @@ public class Curso {
     private String nome;
     private String categoria;
 
-    public Curso(String nome, String categoria) {
-        this.nome = nome;
-        this.categoria = categoria;
-    }
-
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -37,9 +32,9 @@ public class Curso {
             return false;
         Curso other = (Curso) obj;
         if (id == null) {
-			return other.id == null;
+            return other.id == null;
         } else return id.equals(other.id);
-	}
+    }
 
     public Long getId() {
         return id;
